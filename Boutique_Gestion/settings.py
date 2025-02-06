@@ -31,6 +31,9 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'ventes',
+    'dashboard', 
+    'produits', 
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -48,7 +51,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
+ 
 ROOT_URLCONF = 'Boutique_Gestion.urls'
 
 TEMPLATES = [
@@ -75,8 +78,12 @@ WSGI_APPLICATION = 'Boutique_Gestion.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+       'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'Django_Boutique',
+        'USER': 'postgres',
+        'PASSWORD': 'Micael2005',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
