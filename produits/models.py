@@ -1,5 +1,5 @@
 from django.db import models
-from .models import Categorie
+
 
 # Create your models here.
 class Categorie(models.Model):

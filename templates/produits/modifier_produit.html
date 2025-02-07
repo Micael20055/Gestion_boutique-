@@ -1,0 +1,12 @@
+{% extends 'tableau_de_bord.html' %}
+
+{% block content %}
+<div class="container">
+  <h1>Modifier le produit "{{ produit.nom }}"</h1>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Enregistrer</button>
+  </form>
+</div>
+{% endblock %}
