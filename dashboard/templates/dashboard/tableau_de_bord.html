@@ -9,20 +9,20 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-            <a class="navbar-brand" href="{% url 'accueil' %}">Boutique en Ligne</a>
+            <a class="navbar-brand" href="{% url 'dashboard:tableau_de_bord' %}">Boutique en Ligne</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'liste_produits' %}">Produits</a>
+                        <a class="nav-link" href="{% url 'produits:liste_produits' %}">Produits</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'liste_categories' %}">Catégories</a>
+                        <a class="nav-link" href="{% url 'produits:liste_categories' %}">Catégories</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'liste_ventes' %}">Ventes</a>
+                        <a class="nav-link" href="{% url 'ventes:liste_ventes' %}">Ventes</a>
                     </li>
                 </ul>
             </div>
@@ -30,7 +30,8 @@
     </header>
 
     <main class="container my-5">
-        {% block content %}{% endblock %}
+        {% block content %}
+        {% endblock %}
     </main>
 
     <footer class="bg-light py-3 text-center">
